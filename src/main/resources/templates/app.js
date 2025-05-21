@@ -8,11 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
             products.forEach(product => {
                 const card = document.createElement('div');
                 card.classList.add('product-card');
-                card.innerHTML = `
+                card.innerHTML = '
                     <img src="${product.image}" alt="${product.name}">
                     <h3>${product.name}</h3>
                     <p>Цена: ${product.price} ₽</p>
                         <button onclick="addToCart(${product.id})">В корзину</button>
+                        ';
                         grid.appendChild(card);
             });
         });

@@ -11,7 +11,7 @@
 <header>
     <nav>
         <a href="/">Главная</a>
-        <a href="/api/products">Продукты</a>
+        <a href="/product">Добавить продукт</a>
        <!-- <a href="/cart">Корзина</a> -->
        <!-- <a href="/profile">Профиль</a> -->
     </nav>
@@ -27,7 +27,6 @@
 </footer>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-    // Пример загрузки товаров с сервера
     fetch('/api/products')
         .then(response => response.json())
         .then(products => {
@@ -50,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function addToCart(productId) {
-    // Логика добавления в корзину
     console.log(`Товар с ID ${productId} добавлен в корзину`);
 }
 </script>
